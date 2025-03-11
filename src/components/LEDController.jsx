@@ -10,12 +10,11 @@ export default function LEDController() {
 
   // Handle LED toggle
   const toggleLed = async () => {
-    /*
     const command = ledStatus ? "OFF" : "ON";
     setIsLoading(true);
-
+/*
     try {
-      await axios.post("http://localhost:5000/led", { command });
+      await axios.post(`${process.env.REACT_APP_API_URL}/led`, { command });
       setLedStatus(!ledStatus);
 
       if (!ledStatus) {
@@ -26,9 +25,8 @@ export default function LEDController() {
       console.error("Error sending command:", error);
     } finally {
       setIsLoading(false);
-    }
-    */
-    setLedStatus(!ledStatus);
+    }*/
+   setLedStatus(!ledStatus);
   };
 
   // Particle effect background
